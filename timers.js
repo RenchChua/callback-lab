@@ -19,11 +19,13 @@ function stopWatchAndButtons(){
   function clickResetBtn(){
     resetBtn.addEventListener('click', function(){
       pauseTimer();
-
+      document.getElementById('timer').innerText = "Stop Watch";
+      console.log(startingTime);
+      startingTime = 0;
     });
   }
 
-
+  clickResetBtn();
 
   function clickStartbtn(){
     startBtn.addEventListener('click', updateTime)
@@ -39,7 +41,7 @@ function stopWatchAndButtons(){
 
   clickPauseBtn();
 
-  function updateTime() {
+  function updateTime(startingTime) {
     timerResult = setInterval(increaseBySecond,1000);
   }
 
