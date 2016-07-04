@@ -26,7 +26,7 @@ function stopWatchAndButtons(){
 
 
   function clickStartbtn(){
-    startBtn.addEventListener('click', timer)
+    startBtn.addEventListener('click', updateTime)
   }
 
   clickStartbtn();
@@ -39,7 +39,7 @@ function stopWatchAndButtons(){
 
   clickPauseBtn();
 
-  function timer() {
+  function updateTime() {
     timerResult = setInterval(increaseBySecond,1000);
   }
 
